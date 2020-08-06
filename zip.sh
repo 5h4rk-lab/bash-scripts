@@ -20,4 +20,3 @@ while [[ true ]];do
 done
 
 #cleaning up
-rm -f result num.list
