@@ -1,9 +1,9 @@
 #!/bin/bash
 # creating numerical list
-echo "creating a list"
+echo "[-]creating a word list list"
 crunch 1 6 1234567890 -o num.list &>/dev/null
 
-echo "running fcrackzip as long if needed"
+echo "[-]running fcrackzip as long if needed"
 while [[ true ]];do
 	file=$(ls | grep zip)
 	fcrackzip -u -D -p num.list $file > result
@@ -20,3 +20,4 @@ while [[ true ]];do
 done
 
 #cleaning up
+rm -f result num.list
